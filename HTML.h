@@ -47,8 +47,6 @@ const char index_html[] PROGMEM = R"rawliteral(
           <input id="LightHigh" type="radio" name="Light"/> <label for="LightRed">Red</label>
         </p>
         
-                    <h2 style="color: blue;">blue</h2>
-                    %BUTTONPLACEHOLDER%
           
           <p><a href="https:/github.com/shlkarl/Smart-clothes"><strong><em><font size="5" >>>>The page of the project<<<</font></strong></a></p>
       </div> 
@@ -97,12 +95,6 @@ const char index_html[] PROGMEM = R"rawliteral(
                                                       var xhr = new XMLHttpRequest();
                                                       xhr.open("GET", "/update?heatRight=" + HeatRight.value, true); 
                                                       xhr.send(); });
-
-                                                    function toggleCheckbox(element) {
-                                                      var xhr = new XMLHttpRequest();
-                                                      if(element.checked){ xhr.open("GET", "/update?state=1", true); }
-                                                      else { xhr.open("GET", "/update?state=0", true); }
-                                                      xhr.send();}
                                                               
  setInterval(function ( ) {
 
