@@ -1,12 +1,8 @@
 #include "Termal.h"
 
 TERMAL::TERMAL(){pinMode(6,OUTPUT);pinMode(7,OUTPUT);pinMode(8,OUTPUT);pinMode(9,OUTPUT);pinMode(21, OUTPUT);
-                 heatFront = 0, heatBack = 0, heatLeft = 0, heatRight = 0;}
+                 heatBack = 0, heatLeft = 0, heatRight = 0;}
 
-
-void TERMAL::SetFront(int f){heatFront = f;}
-void TERMAL::HeatingFront(){ if(GetFront() < heatFront) digitalWrite(6,HIGH);  else digitalWrite(6,LOW);}
-float TERMAL::GetFront() {sensors.requestTemperatures(); return sensors.getTempC(ds0);}
 
 
 void TERMAL::SetBack(int b){heatBack = b;}
