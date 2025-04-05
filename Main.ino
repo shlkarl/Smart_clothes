@@ -9,11 +9,11 @@
 #include "Led.h"
 
 AsyncWebServer server(80);
-const char* ssid = "mywear";
+const char* ssid = "mywear.com";
 const char* password = NULL;
 IPAddress IP(192, 168, 1, 4);
 DNSServer dnsServer;
-const char *server_name = "mywear";
+const char *server_name = "mywear.com";
 
 TERMAL Termal;
 CHARGE Charge;
