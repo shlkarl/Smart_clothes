@@ -55,16 +55,14 @@ void setup(){
       
     else if (request->hasParam(Led_red))   Led.light(0);        
       
-        if (request->hasParam(Heat_front)) {inputMessage = request->getParam(Heat_front)->value(); Termal.SetFront(inputMessage.toInt());}
-      
-    else if (request->hasParam(Heat_back)) {inputMessage = request->getParam(Heat_back)->value(); Termal.SetBack(inputMessage.toInt());}
+       if (request->hasParam(Heat_back)) {inputMessage = request->getParam(Heat_back)->value(); Termal.SetBack(inputMessage.toInt());}
       
     else if (request->hasParam(Heat_left)) {inputMessage = request->getParam(Heat_left)->value(); Termal.SetLeft(inputMessage.toInt());}
       
     else if (request->hasParam(Heat_right)) {inputMessage = request->getParam(Heat_right)->value(); Termal.SetRight(inputMessage.toInt());}
 
     request->send(200, "text/plain", "OK");});
-server.on("/state", HTTP_GET, [] (AsyncWebServerRequest *request) { request->send(200, "text/plain",(String(Charge.getCharge())+ "% Temperature:" + String(Termal.GetFront()) + "°C"+ String(Termal.GetBack()) + "°C"+ String(Termal.GetLeft()) + "°C").c_str());});
+server.on("/state", HTTP_GET, [] (AsyncWebServerRequest *request) { request->send(200, "text/plain",(String(Charge.getCharge())+ "% Temperature:" + String(Termal.GetRight()) + "°C"+ String(Termal.GetBack()) + "°C"+ String(Termal.GetLeft()) + "°C").c_str());});
  
   server.begin();
 }
