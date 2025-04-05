@@ -9,7 +9,7 @@
 #include "Led.h"
 
 AsyncWebServer server(80);
-const char* ssid = "sw.com";
+const char* ssid = "mywear";
 const char* password = NULL;
 IPAddress IP(192, 168, 1, 4);
 DNSServer dnsServer;
