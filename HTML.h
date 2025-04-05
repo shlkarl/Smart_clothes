@@ -1,6 +1,5 @@
 #pragma once
 
-const char* Heat_front = "heatFront";
 const char* Heat_back = "heatBack";
 const char* Heat_left = "heatLeft";
 const char* Heat_right = "heatRight";
@@ -33,8 +32,6 @@ const char index_html[] PROGMEM = R"rawliteral(
                  <h2 style="color: red;">Power:%POWER%</h2>
                  
                     <h2 style="color: red;">Heat</h2>
-         <h4>Heat front<input type="range" id="HeatFront" min="15" max="40" step="1" value="20"></h4>
-         <p id="outputHeatFront">20</p>%FRONT%
          <h4>Heat back<input type="range" id="HeatBack" min="15" max="40" step="1" value="20"></h4>
          <p id="outputHeatBack">20</p>
          <h4>Heat left<input type="range" id="HeatLeft" min="15" max="40" step="1" value="20"></h4>
@@ -82,12 +79,6 @@ const char index_html[] PROGMEM = R"rawliteral(
                                                       xhr.open("GET", "/update?ledRed=" + this.value, true);
                                                       xhr.send();});
 
-
-                                                    HeatFront.addEventListener("input", function() {
-                                                      outputHeatFront.textContent = HeatFront.value;
-                                                      var xhr = new XMLHttpRequest();
-                                                      xhr.open("GET", "/update?heatFront=" + HeatFront.value, true); 
-                                                      xhr.send();});
                                                       
                                                     HeatBack.addEventListener("input", function() {
                                                       outputHeatBack.textContent = HeatBack.value;
