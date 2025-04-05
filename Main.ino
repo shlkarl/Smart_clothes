@@ -69,5 +69,7 @@ server.on("/state", HTTP_GET, [] (AsyncWebServerRequest *request) { request->sen
 
 void loop(){
   dnsServer.processNextRequest();
-  Termal.HeatingFront();
+  Termal.HeatingBack();
+  Termal.HeatingRight();
+  Termal.HeatingLeft();
 }
