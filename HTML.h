@@ -1,6 +1,5 @@
 #pragma once
 
-
 const char* Heat_front = "heatFront";
 const char* Heat_back = "heatBack";
 const char* Heat_left = "heatLeft";
@@ -10,7 +9,6 @@ const char* Led_off = "ledOff";
 const char* Led_Blue = "ledBlue";
 const char* Led_Green = "ledMedium";
 const char* Led_Red = "ledRed";
-
 
 const char index_html[] PROGMEM = R"rawliteral(
 <!DOCTYPE HTML><html>
@@ -28,14 +26,12 @@ const char index_html[] PROGMEM = R"rawliteral(
   </style>
 </head>
 
-
 <body>
     <div style="background-image: linear-gradient(to left, #ff99cc, #99ffcc);">
           <h1  style="color: purple;">Manage your clothes right here!!!</h1>
           
                  <h2 style="color: red;">Power:%POWER%</h2>
                  
- 
                     <h2 style="color: red;">Heat</h2>
          <h4>Heat front<input type="range" id="HeatFront" min="15" max="40" step="1" value="20"></h4>
          <p id="outputHeatFront">20</p>%FRONT%
@@ -58,9 +54,6 @@ const char index_html[] PROGMEM = R"rawliteral(
                     %BUTTONPLACEHOLDER%
           
           <p><a href="https:/github.com/shlkarl/Smart-clothes"><strong><em><font size="5" >>>>The page of the project<<<</font></strong></a></p>
-          /*  <h4> <strong>Contacts:</strong> </h4>
-            <h5> Phone: +7 (999) 668-36-39 </h5>
-            <h5>E-mail: <i>aitov.av@edu.spbstu.ru</i></h5>*/
       </div> 
 
                               <script>          
@@ -134,12 +127,6 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "/state", true); 
 xhttp.send();
 }, 1000 ) ;
-
-
-
-
-
-
                            </script>
                                            
 </body>
